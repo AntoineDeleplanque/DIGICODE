@@ -11,7 +11,7 @@
             </ListView.View>
         </ListView>
         <Label Content="Digicode" Name="TitreLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Height="50" Width="672" Margin="6,-9,0,0" FontSize="24" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold"/>
-        <Button Content="Voir le Code" Name="ShowCodeButton" HorizontalAlignment="Left" Margin="150,403,0,0" VerticalAlignment="Top" Width="150" Height="57"/>
+        <Button Content="Voir le Code" Name="ShowCodeButton" HorizontalAlignment="Left" Margin="150,403,0,0" VerticalAlignment="Top" Width="150" Height="57" Click="ShowCodeButton_Click"/>
         <Button Content="Réinitialiser le code" Name="ResetCodeButton" HorizontalAlignment="Left" Margin="400,403,0,0" VerticalAlignment="Top" Width="150" Height="57" Click="ResetCodeButton_Click"/>
 
     </Grid>

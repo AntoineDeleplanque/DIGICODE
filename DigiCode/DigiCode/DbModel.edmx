@@ -15,6 +15,7 @@
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Libelle" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Code" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="LastUpdate" Type="datetime" Nullable="false" />
   </EntityType>
 </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -30,6 +31,7 @@
           <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" cg:SetterAccess="Private" cg:GetterAccess="Private" />
           <Property Type="String" Name="Libelle" Nullable="false" cg:SetterAccess="Protected" />
           <Property Type="String" Name="Code" Nullable="true" cg:SetterAccess="Protected" />
+          <Property Type="DateTime" Name="LastUpdate" Nullable="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -43,6 +45,7 @@
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Libelle" ColumnName="Libelle" />
           <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="LastUpdate" ColumnName="LastUpdate" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

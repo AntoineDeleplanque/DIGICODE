@@ -21,13 +21,14 @@ namespace DigiCode
         {
             if (SalleListView.SelectedItems.Count > 0)
             {
-                MessageBoxResult result = MessageBox.Show("Changer le Digicode de ces(cette) salle(s)?", "Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                MessageBoxResult result = MessageBox.Show("Changer le Digicode de cette(ces) salle(s)?", "Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Question);
                 if (result == MessageBoxResult.Yes)
                 {
                     foreach (SalleEntity salle in SalleListView.SelectedItems)
                     {
                         salle.ResetCode();
                     }
+                    SalleListView.ItemsSource = SalleService.LoadSalleList();
                 }
             }
             else
@@ -46,7 +47,10 @@ namespace DigiCode
                     MessageBoxResult result = MessageBox.Show("Voir le code de cette salle : " + firstOrDefaultSalleEntity.Libelle + "?", "Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Question);
                     if (result == MessageBoxResult.Yes)
                     {
-                        MessageBox.Show(firstOrDefaultSalleEntity.Code.ToString(CultureInfo.InvariantCulture));
+                        if (!string.IsNullOrEmpty(firstOrDefaultSalleEntity.Code.ToString(CultureInfo.InvariantCulture)))
+                        {
+                            MessageBox.Show(firstOrDefaultSalleEntity.Code.ToString(CultureInfo.InvariantCulture));
+                        }
                     }
                 }
             }

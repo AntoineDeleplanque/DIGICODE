@@ -2,13 +2,13 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, and Azure
 -- --------------------------------------------------
--- Date Created: 05/12/2014 12:27:20
--- Generated from EDMX file: C:\Users\AntoineD\Documents\DEV_BTS\PPE4\DigiCode\DigiCode\DigiCode\DbModel.edmx
+-- Date Created: 06/02/2014 23:49:18
+-- Generated from EDMX file: C:\Users\AntoineD\Documents\DEV_BTS\DIGICODE\DigiCode\DigiCode\DbModel.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
 GO
-USE [DigiCode];
+USE [DIGICODE];
 GO
 IF SCHEMA_ID(N'dbo') IS NULL EXECUTE(N'CREATE SCHEMA [dbo]');
 GO
@@ -34,7 +34,8 @@ GO
 CREATE TABLE [dbo].[SalleEntityJeu] (
     [ID] int IDENTITY(1,1) NOT NULL,
     [Libelle] nvarchar(max)  NOT NULL,
-    [Code] nvarchar(max)  NULL
+    [Code] nvarchar(max)  NULL,
+    [LastUpdate] datetime  NOT NULL
 );
 GO
 
